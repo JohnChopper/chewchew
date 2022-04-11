@@ -162,8 +162,8 @@ function App() {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 4) {
-      newMintAmount = 4;
+    if (newMintAmount > 5) {
+      newMintAmount = 5;
     }
     setMintAmount(newMintAmount);
   };
@@ -262,7 +262,7 @@ function App() {
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
                   1 {CONFIG.SYMBOL} costs <br></br>{CONFIG.DISPLAY_COST}{" "}
-                  {CONFIG.NETWORK.SYMBOL} <br></br> Max 4 per TX
+                  {CONFIG.NETWORK.SYMBOL} <br></br> Max 5 per TX
                 </s.TextTitle>
                 <s.SpacerXSmall />
                 <s.TextDescription
