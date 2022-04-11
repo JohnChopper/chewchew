@@ -1,10 +1,10 @@
 {
-  "CONTRACT_ADDRESS": "0xd0E8D5e9AD521fcac8dB1507B8597D5B40004f9D",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0xd0E8D5e9AD521fcac8dB1507B8597D5B40004f9D",
+  "CONTRACT_ADDRESS": "0x2f4FFe2299C86be747Da04f0D7aC4222a0869514",
+  "SCAN_LINK": "https://etherscan.io/address/0x2f4ffe2299c86be747da04f0d7ac4222a0869514",
   "NETWORK": {
-    "NAME": "Rinkeby",
+    "NAME": "Ethereum",
     "SYMBOL": "ETH",
-    "ID": 4
+    "ID": 1
   },
   "NFT_NAME": "DoodsVerse",
   "SYMBOL": "Doods",
