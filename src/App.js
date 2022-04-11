@@ -114,7 +114,7 @@ function App() {
     MAX_SUPPLY: 4444,
     WEI_COST: 0,
     DISPLAY_COST: 0,
-    GAS_LIMIT: 285000,
+    GAS_LIMIT: 175000,
     MARKETPLACE: "",
     MARKETPLACE_LINK: "",
     SHOW_BACKGROUND: false,
