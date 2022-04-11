@@ -102,18 +102,18 @@ function App() {
   const [feedback, setFeedback] = useState(`First 3000 Free`);
   const [mintAmount, setMintAmount] = useState(1);
   const [CONFIG, SET_CONFIG] = useState({
-    CONTRACT_ADDRESS: "0x1D47b830C073227b379f181D1309719b04a5f612",
-    SCAN_LINK: "https://rinkeby.etherscan.io/address/0x1D47b830C073227b379f181D1309719b04a5f612",
+    CONTRACT_ADDRESS: "0xd0E8D5e9AD521fcac8dB1507B8597D5B40004f9D",
+    SCAN_LINK: "https://rinkeby.etherscan.io/address/0xd0E8D5e9AD521fcac8dB1507B8597D5B40004f9D",
     NETWORK: {
       NAME: "Rinkeby",
       SYMBOL: "ETH",
       ID: 4,
     },
     NFT_NAME: "DoodsVerse",
-    SYMBOL: "DV",
+    SYMBOL: "Doods",
     MAX_SUPPLY: 4444,
-    WEI_COST: 51000000000000000,
-    DISPLAY_COST: 0.051,
+    WEI_COST: 0,
+    DISPLAY_COST: 0,
     GAS_LIMIT: 285000,
     MARKETPLACE: "",
     MARKETPLACE_LINK: "",
