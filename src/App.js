@@ -101,12 +101,12 @@ function App() {
   const [feedback, setFeedback] = useState(`REVEALS ON SELL OUT`);
   const [mintAmount, setMintAmount] = useState(1);
   const [CONFIG, SET_CONFIG] = useState({
-    CONTRACT_ADDRESS: "0xd0E8D5e9AD521fcac8dB1507B8597D5B40004f9D",
-    SCAN_LINK: "https://rinkeby.etherscan.io/token/0xd0E8D5e9AD521fcac8dB1507B8597D5B40004f9D",
+    CONTRACT_ADDRESS: "0xC335519f7faD1D073fEB81FC8fA31FE641aCDbD7",
+    SCAN_LINK: "https://etherscan.io/address/0xc335519f7fad1d073feb81fc8fa31fe641acdbd7",
     NETWORK: {
-      NAME: "Rinkeby",
+      NAME: "Ethereum",
       SYMBOL: "ETH",
-      ID: 4,
+      ID: 1,
     },
     NFT_NAME: "ChewChew",
     SYMBOL: "Chew",
