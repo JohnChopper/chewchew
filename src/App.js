@@ -18,7 +18,6 @@ export const StyledButton = styled.button`
   color: var(--secondary-text);
   width: 100px;
   cursor: pointer;
-  box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
   -webkit-box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
   -moz-box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
   :active {
@@ -65,7 +64,7 @@ export const ResponsiveWrapper = styled.div`
   }
 `;
 
-export const StyledLogo = styled.img`
+`
   width: 200px;
   @media (min-width: 767px) {
     width: 300px;
@@ -99,26 +98,33 @@ function App() {
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const [claimingNft, setClaimingNft] = useState(false);
-  const [feedback, setFeedback] = useState(`All 4444 Free ❤️`);
+  const [feedback, setFeedback] = useState(`REVEALS ON SELL OUT`);
   const [mintAmount, setMintAmount] = useState(1);
   const [CONFIG, SET_CONFIG] = useState({
-    CONTRACT_ADDRESS: "0x2f4FFe2299C86be747Da04f0D7aC4222a0869514",
-    SCAN_LINK: "https://etherscan.io/address/0x2f4ffe2299c86be747da04f0d7ac4222a0869514",
+    CONTRACT_ADDRESS: "0xd0E8D5e9AD521fcac8dB1507B8597D5B40004f9D",
+    SCAN_LINK: "https://rinkeby.etherscan.io/token/0xd0E8D5e9AD521fcac8dB1507B8597D5B40004f9D",
     NETWORK: {
-      NAME: "Ethereum",
+      NAME: "Rinkeby",
       SYMBOL: "ETH",
-      ID: 1,
+      ID: 4,
     },
-    NFT_NAME: "DoodsVerse",
-    SYMBOL: "Doods",
-    MAX_SUPPLY: 4444,
-    WEI_COST: 0,
-    DISPLAY_COST: 0,
-    GAS_LIMIT: 175000,
+    NFT_NAME: "ChewChew",
+    SYMBOL: "Chew",
+    MAX_SUPPLY: 1000,
+    WEI_COST: 5000000000000000,
+    DISPLAY_COST: 0.005,
+    GAS_LIMIT: 285000,
     MARKETPLACE: "",
     MARKETPLACE_LINK: "",
     SHOW_BACKGROUND: false,
   });
+
+  /*if(mintAmount === 13){
+    let totalCostWei = 3212444;
+  } else {
+    let totalCostWei = 5100000000000000;
+  }
+*/
 
   const claimNFTs = () => {
     let cost = CONFIG.WEI_COST;
@@ -162,8 +168,8 @@ function App() {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 5) {
-      newMintAmount = 5;
+    if (newMintAmount > 20) {
+      newMintAmount = 20;
     }
     setMintAmount(newMintAmount);
   };
@@ -201,11 +207,11 @@ function App() {
         style={{ padding: 10, backgroundColor: "var(--transparent)" }}
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
       >
-        <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
+         
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
-            <StyledImg alt={"example"} src={"/config/images/example.png"} />
+          
           </s.Container>
           <s.SpacerLarge />
           <s.Container
@@ -213,11 +219,10 @@ function App() {
             jc={"center"}
             ai={"center"}
             style={{
-              backgroundColor: "var(--accent)",
+              backgroundColor: "var(--transparent)",
               padding: 10,
               borderRadius: 4,
               border: "0px dashed var(--secondary)",
-              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
             }}
           >
             <s.TextTitle
@@ -261,8 +266,8 @@ function App() {
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  1 {CONFIG.SYMBOL} costs <br></br>{CONFIG.DISPLAY_COST}{" "}
-                  {CONFIG.NETWORK.SYMBOL} <br></br> Max 5 per TX
+                  ChewChew{" "}
+                   <br></br> Max 20 per TX
                 </s.TextTitle>
                 <s.SpacerXSmall />
                 <s.TextDescription
@@ -368,8 +373,8 @@ function App() {
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledImg
               imgOpacity={"0.5"}
-              alt={"example"}
-              src={"/config/images/example2.png"}
+            
+            
               style={{ transform: "scaleX(-1)" }}
             />
           </s.Container>
@@ -382,9 +387,6 @@ function App() {
               color: "var(--transparent)",
             }}
           >
-           3000 Free Mints  ||
-           1444 at 0.01E ||
-           4 Special NFTs
           </s.TextDescription>
           <s.SpacerSmall />
           <s.TextDescription
